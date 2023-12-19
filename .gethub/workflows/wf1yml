@@ -1,0 +1,9 @@
+name:hello
+on :push 
+jobs:
+ hello2
+ runs-on:unbuntu-latest
+ steps:
+ - uses:action/checkout@v1
+ - name:print hello
+ - run :echo"hello latifa"
