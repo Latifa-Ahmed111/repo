@@ -1,5 +1,5 @@
 name:hello
-on :push 
+on:push 
 jobs:
  hello2
  runs-on:unbuntu-latest
