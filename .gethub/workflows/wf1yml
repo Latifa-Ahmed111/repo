@@ -1,9 +1,12 @@
-name:hello
-on:push 
+name: Run automated tests
+on:
+  pull_request:
+    branches:
+      - main
 jobs:
- hello2
- runs-on:unbuntu-latest
- steps:
- - uses:action/checkout@v1
- - name:print hello
- - run :echo"hello latifa"
+  TestJob:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the project's source code from the repository.
+      - name: Checkout project sources
+        uses: actions/checkout@v4
